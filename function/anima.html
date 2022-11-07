@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html, body { 
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+        
+        #sideBar {
+            background-color: skyblue;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            transform: translate3d(-100vw, 0, 0);
+            transition: transform 0.4s ease-in-out;
+        }
+        
+        #sideBar.active {
+            transform: translate3d(0, 0, 0);
+        }
+        
+        .nav {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            margin:0;
+            padding: 1rem;
+        }
+        
+        .nav-link {
+            cursor: pointer;
+            color: #333;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.2s ease-in-out;
+            padding: 0.5rem 0;
+            text-align: center;
+        }
+        
+        .nav-link:hover {
+            color: #fff;
+            transform: translate3d(2px, 2px, 0);
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="Chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='sideBar' class='active'>
+        <ul class='nav'>
+            <li class='nav-link'>Home</li>
+            <li class='nav-link'>Transition</li>
+            <li class='nav-link'>Animation</li>
+            <li class='nav-link'>About</li>
+            <li class='nav-link'>Contact</li>
+        </ul>
+    </div>
+    
+    <button id='menuBtn'>OPEN</button>
+    <h1>HELLO goorm EDU</h1>
+    
+</body>
+<script>
+    const sideBar = document.querySelector('#sideBar');
+    const menuBtn = document.querySelector('#menuBtn');
+
+    function toggleMenu() {
+        return sideBar.classList.toggle('active');
+    };
+
+    menuBtn.addEventListener('click', toggleMenu);
+    sideBar.addEventListener('click', toggleMenu);
+</script>
+</html>

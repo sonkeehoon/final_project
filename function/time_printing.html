@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #textWrapper {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="Chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id='button'>START</button>
+    <div id='textWrapper'></div>
+    
+    
+</body>
+<script>
+    const button = document.querySelector('#button');
+
+    function printText() {
+        const textWrapper = document.querySelector('#textWrapper');
+        textWrapper.textContent += 'goorm \n';
+    }
+    
+    let timerId = -1;
+    button.addEventListener('click', () => {
+        const isActivated = button.textContent === 'STOP'
+      button.textContent =  isActivated ? 'PRINT' : 'STOP';
+        if (isActivated) return clearInterval(timerId);
+        timerId = setInterval(printText, 1000);
+    });
+</script>
+</html>

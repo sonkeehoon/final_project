@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .wrapper {
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        #progressBar {
+            width: 0;
+            height: 36px;
+            background-color: #F9E200;
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="Chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class='wrapper'>
+        <div id='progressBar'>0%</div>
+    </div>
+    
+    
+</body>
+<script>
+    const progressBar = document.querySelector("#progressBar");
+
+    let progress = 0;
+    let start;
+
+    function step(timestamp) {  
+        if (start === undefined)
+        start = timestamp;
+    const elapsed = timestamp - start;
+        progress = elapsed / 16 / 10
+        progressBar.style.width = progress + "%";
+        progressBar.innerHTML = progress + "%";
+        if (progress < 100) {
+            return requestAnimationFrame(step);
+        }
+    }
+    requestAnimationFrame(step);
+</script>
+</html>

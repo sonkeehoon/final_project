@@ -1,0 +1,127 @@
+/* 글자를 진하게 하기 
+* {
+    font-weight: bold;
+} */ 
+/* .main {
+	background-color: skyblue;
+	width: 100px;
+	padding: 24px;
+}
+.sub {
+	background-color: pink;
+	padding: inherit;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+
+body {
+    text-align: center;
+    background-color: bisque;
+}
+
+
+#login_div {
+    margin-top: 50px;
+}
+
+#join_div {
+    font-weight: bolder;
+    margin-top: 50px;
+}
+
+#doLogin {
+    color:white;
+    background-color: black;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: white;
+
+}
+
+#login,#join {
+    color:white;
+    background-color: black;
+    font-size: 15px;
+    margin-bottom: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: white;
+
+}
+
+#button {
+    color:white;
+    background-color: black;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: white;
+}
+#logo {
+    border: 0;
+    width:40px;
+    height:40px;
+    vertical-align: top;
+}
+
+
+
+
+
+#title {
+    background-color: rgba(0,191,255,0.5);
+    vertical-align: top;
+    text-align: center;
+    border-style:outset;
+    
+}
+
+
+.date{
+    color:white;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    border-color: white;
+}
+
+#date{
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 150%;
+}
+
+#date_div {
+    margin-top: 50px;
+}
+
+#Name{
+    font-weight: bold;
+}
+
+
+.submit{
+    background:#f770b3;
+    color:white;
+    font-size: 12px;
+    margin: 25px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border-color:white;
+}
+#submit{
+    font-weight: bold;
+    color:brown;
+}
+
+.night_day{
+    background:#f770b3;
+    color:white;
+    font-size: 12px;
+    /* margin: 5px; */
+    padding: 5px 5px;
+    border-radius: 4px;
+    border-color:white;
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            padding: 2rem;
+        }
+        
+        #trigger {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: skyblue;
+            cursor: pointer;
+            transition-property: transform background;
+            transition-duration: 2s;
+            transition-delay: 1s;
+        }
+        
+        #trigger:hover {
+            transform: scale3d(1.4, 1.4, 1);
+            background: pink;
+        }
+        
+        #message {
+            color: red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h2 >현재 상태 :
+        <span id="message"></span>
+    </h2>
+    <div id="trigger">
+        마우스를 <br/>
+        올려 주세요.
+    </div>
+    
+</body>
+<script>
+    const message = document.querySelector('#message');
+    const trigger = document.querySelector('#trigger');
+
+    trigger.addEventListener('transitionrun', function() {
+    message.textContent = 'transitionrun';
+    });
+
+    trigger.addEventListener('transitionstart', function() {
+    message.textContent = 'transitionstart';
+    });
+
+    trigger.addEventListener('transitioncancel', function() {
+    message.textContent = 'transitioncancel';
+    });
+
+    trigger.addEventListener('transitionend', function() {
+    message.textContent = 'transitionend';
+    });
+</script>
+</html>
