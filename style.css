@@ -19,17 +19,21 @@ body {
     background-color: bisque;
 }
 
+div {
+    margin:10px;
+}
+
 
 #login_div {
     margin-top: 50px;
 }
 
-#join_div {
+#join_div, #seat_div {
     font-weight: bolder;
     margin-top: 50px;
 }
 
-#doLogin {
+#doLogin, #seat, #book {
     color:white;
     background-color: black;
     font-size: 20px;
@@ -37,10 +41,9 @@ body {
     padding: 10px;
     border-radius: 5px;
     border-color: white;
-
 }
 
-#login,#join {
+#login, #join, #date_submit {
     color:white;
     background-color: black;
     font-size: 15px;
@@ -123,5 +126,9 @@ body {
     padding: 5px 5px;
     border-radius: 4px;
     border-color:white;
+}
+
+.seat_info{
+    margin: 30px;
 }
 
