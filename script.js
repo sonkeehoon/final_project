@@ -32,16 +32,19 @@ function showLogin(){
   
 }
 
+var url = '127.0.0.1';
+var port = '5500';
+
 function showLoginPage() {
-    window.open('http://127.0.0.1:5500/join.html');
+    window.open('http://'+url+':'+port+'/join.html');
 }
 
 function showSeat() {
-    window.open('http://127.0.0.1:5500/seat.html');
+    window.open('http://'+url+':'+port+'/seat.html');
 }
 
 function showTicketingPage() {
-    window.open('http://127.0.0.1:5500/ticketingPage.html');
+    window.open('http://'+url+':'+port+'/ticketingPage.html');
 }
 
 
