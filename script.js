@@ -1,3 +1,7 @@
+var url = '127.0.0.1';
+var port = '5500';
+
+
 function message(){
     alert("예매가 완료되었습니다.")
 }
@@ -32,9 +36,6 @@ function showLogin(){
   
 }
 
-var url = '127.0.0.1';
-var port = '5500';
-
 function showLoginPage() {
     window.open('http://'+url+':'+port+'/join.html');
 }
@@ -43,9 +44,9 @@ function showSeat() {
     window.open('http://'+url+':'+port+'/seat.html');
 }
 
-function showTicketingPage() {
-    window.open('http://'+url+':'+port+'/ticketingPage.html');
-}
+// function showTicketingPage() {
+//     window.open('http://'+url+':'+port+'/ticketingPage.html');
+// }
 
 
 
