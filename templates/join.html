@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="/static/script.js"></script>
+        <link rel="stylesheet" href="/static/style.css">
+        <meta http-equiv="X-UA-Compatible" content="Chrome">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Goorm Ticketing join </title>
+
+        {%with messages = get_flashed_messages()%}
+        {%if messages %}
+          <script type="text/javascript">
+            alert("{{messages[0]}}");
+          </script>
+          {%endif%}
+        {%endwith%}
+
+
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <img src="/static/img/logo.png" id="logo">
+                <a id="title">구름 티켓팅</a>
+                <h2>회원가입 페이지</h2>
+            </h1>
+            <hr>
+            <form method="POST" action="/register">
+                <div id="join_div">
+                    <p>아이디 : <input type="text" id="ID" name="ID"></p>
+                    <p>비밀번호 : <input type="password" id="password" name="password"></p>
+                    <p>비밀번호 확인 : <input type="password" id="password2" name="password2"></p>
+                    <a><input type="submit" id="join" value="가입하기"></a>
+                </div>
+            </form>
+            <div>
+                <a><input type="submit" id="join" value="로그인 하러가기" onclick="goToLogin()"></a>
+            </div>
+
+
+            <hr>
+            <div id="date_div">
+                <button type="button" onclick="showDate()" class="date">현재 시간</button>
+                <p id="date"></p>
+            </div>
+
+            <div>
+                <input type="button" class="night_day" value="night mode" onclick="
+                nightDayHandler(this);
+                ">
+            </div>
+
+
+
+        </header>
+
+    </body>
+</html>
+
+

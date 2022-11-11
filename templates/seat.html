@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-        <script src="../script.js"></script>
-        <link rel="stylesheet" href="../style.css">
+        <script src="/static/script.js"></script>
+        <link rel="stylesheet" href="/static/style.css">
         <meta http-equiv="X-UA-Compatible" content="Chrome">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Goorm Ticketing join </title>
@@ -13,7 +13,7 @@
     <body>
         <header>
             <h1>
-                <img src="img/logo.png" id="logo">
+                <img src="/static/img/logo.png" id="logo">
                 <a id="title">구름 티켓팅</a>
                 <h2>★좌석 현황★</h2>
             </h1>
@@ -21,11 +21,12 @@
 
             <div id="seat_div">
                 <div>
-                    <a>날짜 선택 : </a>
+                    <a>날짜 : </a>
                     <input type="date" id="input_date">
                 </div>
+                
                 <div>
-                    <div><a>공연 선택 : </a>
+                    <div><a>공연 : </a>
                         <select id="concert">
                             <option selected>선택하세요</option>
                             <option value="A">콘서트A</option>

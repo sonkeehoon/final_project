@@ -1,5 +1,5 @@
 var url = '127.0.0.1';
-var port = '5500';
+var port = '5000';
 
 
 function message(){
@@ -11,7 +11,7 @@ function showInfo(){
     var date=document.getElementById("input_date").value;
     var concert=document.getElementById("concert").value;
     
-    if(concert ==="선택하세요" ||  date===""){
+    if(concert === "선택하세요" ||  date === ""){
 
         alert("날짜와 공연을 선택해 주세요.");
         document.querySelector('#seat_info').innerHTML="";
@@ -28,20 +28,39 @@ function showInfo(){
 
 function showLogin(){
 
-    document.querySelector('.id').innerHTML= '<input type="text" id="ID" name="ID" placeholder="아이디">';
-    document.querySelector('.pass').innerHTML= '<input type="password" id="password" name="password" placeholder="비밀번호">';
-    document.querySelector('.button').innerHTML='<input type="button" id="login" name="button" value="로그인"></button>';
+    document.querySelector('.id').innerHTML= '<input type="text" id="login_ID" name="ID" placeholder="아이디">';
+    document.querySelector('.pass').innerHTML= '<input type="password" id="login_password" name="password" placeholder="비밀번호">';
+    document.querySelector('.button').innerHTML='<input type="button" id="login" name="button"\
+        value="로그인" onclick="login()"></button>';
     document.querySelector('.join').innerHTML='<input type="button" id="login" name="button" \
-    value="회원가입" onclick="showLoginPage()" ></button>';
+        value="회원가입" onclick="showJoinPage()" ></button>';
   
 }
 
-function showLoginPage() {
-    window.open('http://'+url+':'+port+'/join.html');
+function showJoinPage() {
+    window.location.href = 'http://'+url+':'+port+'/join.html';
 }
 
 function showSeat() {
-    window.open('http://'+url+':'+port+'/seat.html');
+    window.location.href = 'http://'+url+':'+port+'/seat.html';
+}
+
+function goToLogin(){
+    window.location.href = 'http://'+url+':'+port+'/';
+}
+
+function login() {
+    var id = document.getElementById("login_ID").value;
+    var pass = document.getElementById("login_password").value;
+    
+    if ( id === "" || pass === "") {
+        alert("아이디와 비밀번호를 확인해 주세요");
+    }
+
+    else {
+        alert("로그인이 완료 되었습니다.");
+    }
+    
 }
 
 // function showTicketingPage() {
