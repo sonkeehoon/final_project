@@ -11,7 +11,9 @@
 
 <p>sudo git clone https://github.com/sonkeehoon/final_project.git</p> 
 <p>sudo mv ./final_project/* /var/www/html</p>
-### 우분투와는 이 부분이 다르다
+
+## 우분투와는 이 부분이 다르다
+
 <p>yum install java-1.8.0-openjdk </p>
 <p>yum install java-1.8.0-openjdk-devel </p>
 <p></p>
