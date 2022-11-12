@@ -1,3 +1,4 @@
+# db.py
 # mariadb와 연동
 import pymysql
 
