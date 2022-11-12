@@ -11,14 +11,9 @@
 <br>
 <p>sudo git clone https://github.com/sonkeehoon/final_project.git</p> 
 <p>sudo mv ./final_project/* /var/www/html</p>
-<p>(처음에 한번만) sudo chown -R ec2-user *</p>
-
-
-## 우분투와는 이 부분이 다르다
-
+<p>sudo chown -R ec2-user *  # 권한 부여</p>
 <p>yum install java-1.8.0-openjdk </p>
 <p>yum install java-1.8.0-openjdk-devel </p>
-<p>---------------------------</p>
 <p>pip3 install -r requirements.txt    # 필요 모듈 및 패키지 설치</p>
 <p> /static/script.js 에 var url부분을 내 ec2인스턴스의 퍼블릭IP로 변경하자(5000번 포트가 열려 있어야 함)</p>
 <p>sudo python3 app.py (서버 실행)</p>
