@@ -16,7 +16,7 @@
 
 <p>yum install java-1.8.0-openjdk </p>
 <p>yum install java-1.8.0-openjdk-devel </p>
-<p></p>
+<p>---------------------------</p>
 <p>pip3 install -r requirements.txt    # 필요 모듈 및 패키지 설치</p>
 
 
