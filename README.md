@@ -11,7 +11,7 @@
 <br>
 <p>sudo git clone https://github.com/sonkeehoon/final_project.git</p> 
 <p>sudo mv ./final_project/* /var/www/html</p>
-<p> sudo chown -R ec2-user *</p>
+<p> sudo chown -R ec2-user * (처음에 한번만)</p>
 
 
 ## 우분투와는 이 부분이 다르다
