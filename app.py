@@ -1,5 +1,9 @@
 # app.py
 # flask
+
+host_address = "0.0.0.0"
+port_number = 5000
+
 from flask import Flask, render_template, request, flash
 from db import insert
 
@@ -53,6 +57,6 @@ def register():
             
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port = 5000, debug = True)
+    app.run(host = host_address, port = port_number, debug = True)
     
     
