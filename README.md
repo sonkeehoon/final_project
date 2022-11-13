@@ -11,7 +11,7 @@
 <br>
 
 + sudo git clone https://github.com/sonkeehoon/final_project.git
-+ sudo mv ./final_project/* /var/www/html
++ sudo cd final_project
 + sudo chown -R ec2-user *  # 권한 부여
 + yum install java-1.8.0-openjdk
 + yum install java-1.8.0-openjdk-devel
