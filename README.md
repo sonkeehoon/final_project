@@ -10,14 +10,14 @@
 <p> 이 글은 <strong>amazon linux</strong>에서 flask 웹서버를 구축할때 쓰던 명령어들을 순서 상관없이 모아놨다 </p>
 <br>
 
-+sudo git clone https://github.com/sonkeehoon/final_project.git
-+sudo mv ./final_project/* /var/www/html
-+sudo chown -R ec2-user *  # 권한 부여
-+yum install java-1.8.0-openjdk
-+yum install java-1.8.0-openjdk-devel
-+pip3 install -r requirements.txt    # 필요 모듈 및 패키지 설치
-+/static/script.js 에 var url부분을 내 ec2인스턴스의 퍼블릭IP로 변경하자(5000번 포트가 열려 있어야 함)
-+sudo python3 app.py (서버 실행)
++ sudo git clone https://github.com/sonkeehoon/final_project.git
++ sudo mv ./final_project/* /var/www/html
++ sudo chown -R ec2-user *  # 권한 부여
++ yum install java-1.8.0-openjdk
++ yum install java-1.8.0-openjdk-devel
++ pip3 install -r requirements.txt    # 필요 모듈 및 패키지 설치
++ /static/script.js 에 var url부분을 내 ec2인스턴스의 퍼블릭IP로 변경하자(5000번 포트가 열려 있어야 함)
++ sudo python3 app.py (서버 실행)
  
 
 
