@@ -1,5 +1,6 @@
-# db.py
+# dbconnect.py
 # mariadb와 연동
+
 import pymysql
 
 def insert(query):

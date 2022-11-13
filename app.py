@@ -5,7 +5,7 @@ host_address = "0.0.0.0"
 port_number = 5000
 
 from flask import Flask, render_template, request, flash
-from db import insert
+from dbconnect import insert
 
 
 app = Flask(__name__)
