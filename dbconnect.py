@@ -6,7 +6,7 @@ import pymysql
 hostname='localhost'
 portNum=3306
 userName='root'
-password='rootroot'
+password=''
 dbName='join'
 
 db = pymysql.connect(host = hostname,
