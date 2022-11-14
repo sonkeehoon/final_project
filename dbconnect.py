@@ -3,17 +3,25 @@
 
 import pymysql
 
-def insert(query):
-    
-    db = pymysql.connect(host='kh-database.cmvilgp6lmfg.ap-northeast-2.rds.amazonaws.com',
-                        port=3306,
-                        user='admin',
-                        passwd='adminadmin',
-                        db='finalProject',
-                        charset='utf8')
-    try:
-        with db.cursor() as cursor:
-            cursor.execute(query)
-            db.commit()
-    finally:
-        db.close()
+hostname='localhost'
+portNum=3306
+userName='root'
+password='rootroot'
+dbName='join'
+
+db = pymysql.connect(host = hostname,
+                        port = portNum,
+                        user = userName,
+                        passwd = password,
+                        db = dbName,
+                        charset = 'utf8')
+def insert_func(query):
+    cursor = db.cursor()
+    cursor.execute(query)
+    db.commit()
+
+        
+def read_func(query):
+    cursor = db.cursor()
+    cursor.execute(query)
+    return cursor.fetchall()

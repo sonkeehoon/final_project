@@ -5,7 +5,7 @@ var port = '5000';
 
 
 function message(){
-    alert("예매가 완료되었습니다.")
+    alert("예매가 완료되었습니다.");
 }
 
 function showInfo(){
@@ -28,15 +28,8 @@ function showInfo(){
     }
 }
 
-function showLogin(){
-
-    document.querySelector('.id').innerHTML= '<input type="text" id="login_ID" name="ID" placeholder="아이디">';
-    document.querySelector('.pass').innerHTML= '<input type="password" id="login_password" name="password" placeholder="비밀번호">';
-    document.querySelector('.button').innerHTML='<input type="button" id="login" name="button"\
-        value="로그인" onclick="login()"></button>';
-    document.querySelector('.join').innerHTML='<input type="button" id="login" name="button" \
-        value="회원가입" onclick="showJoinPage()" ></button>';
-  
+function showLoginPage(){
+    window.location.href = 'http://'+url+':'+port+'/login.html';
 }
 
 function showJoinPage() {
@@ -51,19 +44,6 @@ function goToLogin(){
     window.location.href = 'http://'+url+':'+port+'/';
 }
 
-function login() {
-    var id = document.getElementById("login_ID").value;
-    var pass = document.getElementById("login_password").value;
-    
-    if ( id === "" || pass === "") {
-        alert("아이디와 비밀번호를 확인해 주세요");
-    }
-
-    else {
-        alert("로그인이 완료 되었습니다.");
-    }
-    
-}
 
 // function showTicketingPage() {
 //     window.open('http://'+url+':'+port+'/ticketingPage.html');

@@ -4,12 +4,20 @@
 host_address = "0.0.0.0"
 port_number = 5000
 
-from flask import Flask, render_template, request, flash
-from dbconnect import insert
+from flask import Flask, render_template, request
+from flask import flash, session
+from dbconnect import insert_func, read_func
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "ABCD"
+
+def get_id_list():
+    query = "SELECT id FROM info;"
+    id_lst=[]
+    for q in read_func(query):
+        id_lst.append(q[0])
+    return id_lst
 
 
 @app.route('/')
@@ -24,9 +32,14 @@ def join():
 def seat():
     return render_template('seat.html')
 
+@app.route('/login.html')
+def login():
+    return render_template('login.html')
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    print('register page')
+    print('register')
+    msg = None
     if request.method == "GET":
         print('GET')
         return render_template('join.html')
@@ -35,26 +48,54 @@ def register():
         password = request.form.get('password')
         re_password = request.form.get('password2')
         
-        print(f"id is {id}, password is {password}")
         
         if id == "" or password == "":
-            flash("[가입 실패] 아이디와 비밀번호를 입력하세요")
+            msg = "[가입 실패] 아이디와 비밀번호를 입력하세요"
             
         elif password != re_password:
-            flash("비밀번호를 확인하세요")
+            msg = "[가입 실패] 비밀번호를 확인하세요"
             
+        elif id in get_id_list():
+            msg = "[가입 실패] 이미 가입된 계정입니다"
+                
         else:
-            sql = f"""INSERT INTO member(id, passwd)
+            query = f"""INSERT INTO info(id, passwd)
                       VALUES("{id}","{password}");"""
-            insert(sql)
-            flash("회원가입 완료")
-            
-            return render_template('join.html')
-            
-            
+            insert_func(query)
+            return render_template('login.html')
+        
+        flash(msg)       
         return render_template('join.html')
             
+@app.route('/loginPage', methods=['GET', 'POST'])
+def loginPage():
+    print('login')
+    
+    if request.method == "GET":
+        return render_template('login.html')
+    else:
+        msg = None
+        id = request.form.get('login_ID')
+        password = request.form.get('login_password')
+        
+        if id == "" or password == "":
+            msg = "[로그인 실패] 아이디와 비밀번호를 입력하세요"
             
+        elif id in get_id_list():
+            query = "SELECT * FROM info;"
+            
+            for i in read_func(query):
+                if i[1] == id:
+                    if i[2] == password:
+                        return render_template('login_success.html')
+                    flash("비밀번호를 확인하세요")
+                    return render_template('login.html')
+                    
+                    
+            
+                  
+        flash(msg)
+        return render_template('login.html')
 
 if __name__ == '__main__':
     app.run(host = host_address, port = port_number, debug = True)

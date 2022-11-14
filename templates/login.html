@@ -7,7 +7,17 @@
         <link rel="stylesheet" href="/static/style.css">
         <meta http-equiv="X-UA-Compatible" content="Chrome">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Goorm Ticketing </title>
+        <title>Goorm Ticketing join </title>
+
+        {%with messages = get_flashed_messages()%}
+        {%if messages %}
+          <script type="text/javascript">
+            alert("{{messages[0]}}");
+          </script>
+          {%endif%}
+        {%endwith%}
+
+
     </head>
 
     <body>
@@ -15,19 +25,19 @@
             <h1>
                 <img src="/static/img/logo.png" id="logo">
                 <a id="title">구름 티켓팅</a>
+                <h2>로그인 페이지</h2>
             </h1>
             <hr>
-            <div>
-                <input type="button" id="doLogin" value="로그인하기" onclick="showLoginPage();">
-                <input type="button" id="dojoin" value="회원가입" onclick="showJoinPage();">    
-            </div>
+            <form method="POST" action="/loginPage">
+                <div id="join_div">
+                    <p><input type="text" id="login_ID" name="login_ID" placeholder="아이디"></p>
+                    <p><input type="password" id="login_password" name="login_password" placeholder="비밀번호"></p>
+                    <input type="submit" id="login" name="button" value="로그인">
+                    <input type="button" id="join" name="button" value="회원가입" onclick="showJoinPage();">
+                </div>
+            </form>
 
-            <div id="login_div">
-                <p class="id" ></p>
-                <p class="pass" ></p>
-                <a class="button"></a>
-                <a class="join"></a>
-            </div>
+
             <hr>
             <div id="date_div">
                 <button type="button" onclick="showDate()" class="date">현재 시간</button>
@@ -39,6 +49,8 @@
                 nightDayHandler(this);
                 ">
             </div>
+
+
 
         </header>
 
