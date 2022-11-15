@@ -30,9 +30,13 @@
             <hr>
             <form method="POST" action="/register">
                 <div id="join_div">
-                    <p>아이디 : <input type="text" id="ID" name="ID"></p>
-                    <p>비밀번호 : <input type="password" id="password" name="password"></p>
-                    <p>비밀번호 확인 : <input type="password" id="password2" name="password2"></p>
+                    <p>아이디 &nbsp&nbsp&nbsp<input type="text" id="ID" name="ID"></p>
+                    <p>비밀번호 <input type="password" id="password" name="password" placeholder="영문+숫자 조합"></p>
+                    <p>확인 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="password" id="password2" name="password2" placeholder="비밀번호 한번 더 입력"></p>
+                    <p>이름 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="name" name="name"></p>
+                    <p>생년월일 &nbsp<input type="text" id="birthday" name="birth" placeholder="ex) 20001115"></p>
+                    <p>연락처 &nbsp&nbsp&nbsp<input type="text" id="contact" name="contact" placeholder="ex) 01012341234"></p>
+                    <p>이메일 &nbsp&nbsp&nbsp<input type="text" id="email" name="email"></p>
                     <a><input type="submit" id="join" value="가입하기"></a>
                 </div>
             </form>
