@@ -16,14 +16,14 @@ function showInfo(){
     if(concert === "선택하세요" ||  date === ""){
 
         alert("날짜와 공연을 선택해 주세요.");
-        document.querySelector('#seat_info').innerHTML="";
+        document.querySelector('#seat_info').innerHTML = "";
 
     }
     
     else {
 
 
-        document.querySelector('#seat_info').innerHTML='남은좌석 : 10 \
+        document.querySelector('#seat_info').innerHTML = '남은좌석 : 10 \
         <input type="button" id="join" value="예매하기" onclick="message()">' ;
     }
 }
@@ -51,7 +51,7 @@ function goToLogin(){
 
 
 
-var Body={
+var Body = {
             setColor : function (color){
                 // document.querySelector('body').style.color = color;
                 $('body').css('color',color);
@@ -69,16 +69,16 @@ function nightDayHandler(self){
     if (self.value === 'night mode'){
         Body.setColor('white');
         Body.setBgColor('black');
-        self.value='day mode';
+        self.value = 'day mode';
     } else {
         Body.setColor('black');
         Body.setBgColor('bisque');
-        self.value='night mode';
+        self.value = 'night mode';
     }
 }
 
 function showDate(){
-    document.querySelector('#date').innerHTML=Date()
+    document.querySelector('#date').innerHTML = Date()
 }
 
 
@@ -86,12 +86,12 @@ function setBtnDisable(self){
     // var btn=document.getElementById("submit_btn");
     var btn=document.getElementById(self.id);
 
-        btn.disabled="disabled";
-        btn.style.backgroundColor="grey"
+        btn.disabled = "disabled";
+        btn.style.backgroundColor = "grey"
 }
 
 
 function onFocusHandler(){
-    var input=document.getElementById("name");
-    input.value='';
+    var input = document.getElementById("name");
+    input.value = '';
 }

@@ -3,25 +3,32 @@
 
 import pymysql
 
-hostname='localhost'
-portNum=3306
-userName='root'
-password=''
-dbName='join'
+hostname = 'localhost'
+portNum = 3306
+userName = 'root'
+password = ''
+dbName = 'join'
 
-db = pymysql.connect(host = hostname,
+db_write = pymysql.connect(host = hostname,
+                        port = portNum,
+                        user = userName,
+                        passwd = password,
+                        db = dbName,
+                        charset = 'utf8')
+
+db_read = pymysql.connect(host = hostname,
                         port = portNum,
                         user = userName,
                         passwd = password,
                         db = dbName,
                         charset = 'utf8')
 def insert_func(query):
-    cursor = db.cursor()
+    cursor = db_write.cursor()
     cursor.execute(query)
-    db.commit()
+    db_write.commit()
 
         
 def read_func(query):
-    cursor = db.cursor()
+    cursor = db_read.cursor()
     cursor.execute(query)
     return cursor.fetchall()

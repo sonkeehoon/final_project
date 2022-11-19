@@ -14,7 +14,7 @@ app.config['SECRET_KEY'] = "ABCD"
 
 def get_id_list():
     query = "SELECT ID FROM info;"
-    id_lst=[]
+    id_lst = []
     for q in read_func(query):
         id_lst.append(q[0])
     return id_lst
@@ -36,7 +36,7 @@ def seat():
 def login():
     return render_template('login.html')
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/register', methods = ['GET', 'POST'])
 def register():
     print('register')
     msg = None
@@ -71,7 +71,7 @@ def register():
         flash(msg)       
         return render_template('join.html')
             
-@app.route('/loginPage', methods=['GET', 'POST'])
+@app.route('/loginPage', methods = ['GET', 'POST'])
 def loginPage():
     print('login')
     
@@ -94,9 +94,11 @@ def loginPage():
                 
                 if info_id == id and info_pass == password:
                     return render_template('login_success.html')
+                
                 flash("정보가 올바르지 않습니다")
                 return render_template('login.html') 
-        
+            
+        flash(msg)
         return render_template('login.html')
 
 if __name__ == '__main__':
