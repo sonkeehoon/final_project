@@ -7,7 +7,7 @@
 <br><br>
 
 <p> ubuntu의 경우 flask 웹서버 구축하는 방법이 검색하면 많이 나온다 </p>
-<p> 이 글은 <strong>amazon linux</strong>에서 flask 웹서버를 구축할때 쓰던 명령어들을 순서 상관없이 모아놨다 </p>
+<p> <strong>amazon linux</strong>에서 flask 웹서버를 구축할때 쓰던 명령어들 </p>
 <br>
 
 + sudo git clone https://github.com/sonkeehoon/final_project.git
