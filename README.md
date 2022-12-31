@@ -11,9 +11,6 @@
 
 + sudo git clone https://github.com/sonkeehoon/final_project.git
 + sudo cd final_project
-+ sudo chown -R ec2-user *  # 권한 부여
-+ yum install java-1.8.0-openjdk
-+ yum install java-1.8.0-openjdk-devel
 + pip3 install -r requirements.txt    # 필요 모듈 및 패키지 설치
 + <strong>/static/script.js의 var url부분을 퍼블릭IP로 변경하자(5000번 포트가 열려 있어야 함)</strong>
 + sudo python3 app.py (서버 실행)
