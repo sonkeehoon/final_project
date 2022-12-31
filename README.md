@@ -6,8 +6,7 @@
 ## - EC2 instance(OS : 아마존 linux)에 flask 실행환경 구축
 <br><br>
 
-<p> ubuntu의 경우 flask 웹서버 구축하는 방법이 검색하면 많이 나온다 </p>
-<p> <strong>amazon linux</strong>에서 flask 웹서버를 구축할때 쓰던 명령어들 </p>
+<p> <strong>ubuntu</strong>에서 flask 웹서버를 구축할때 쓰던 명령어들 </p>
 <br>
 
 + sudo git clone https://github.com/sonkeehoon/final_project.git
